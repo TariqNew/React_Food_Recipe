@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import foodImage from "../../assets/images/food.jpg";
 import Button from "../Button/Button";
 
@@ -6,6 +5,7 @@ export default function Navbar() {
   return (
     <nav className="text-white font-large p-4">
       <div className="container mx-auto flex items-center justify-between backdrop-blur-md bg-white/30 rounded-md p-4">
+        {/* Logo */}
         <div className="flex items-center space-x-3">
           <img
             src={foodImage}
@@ -14,30 +14,29 @@ export default function Navbar() {
           />
           <span className="text-xl font-bold">FoodRecipe</span>
         </div>
-        
+
         {/* Navigation Links */}
         <div className="flex space-x-6">
-          <Link
-            to="/"
-            className="transition duration-300 px-3 py-2 rounded-md font-medium"
+          <a
+            href="#home"
+            className="transition duration-300 px-3 py-2 rounded-md font-medium hover:bg-white/20"
           >
             Home
-          </Link>
-          <Link
-            to="/about"
-            className="transition duration-300 px-3 py-2 rounded-md font-medium"
+          </a>
+          <a
+            href="#about"
+            className="transition duration-300 px-3 py-2 rounded-md font-medium hover:bg-white/20"
           >
             About
-          </Link>
-          <Link
-            to="/services"
-            className="transition duration-300 px-3 py-2 rounded-md font-medium"
+          </a>
+          <a
+            href="#services"
+            className="transition duration-300 px-3 py-2 rounded-md font-medium hover:bg-white/20"
           >
             Services
-          </Link>
-          <Button name={'Get Started'}/>
+          </a>
+          <Button name="Get Started" />
         </div>
-        
       </div>
     </nav>
   );
