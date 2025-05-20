@@ -1,7 +1,6 @@
 import "./Home.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Button from "../../components/Button/Button";
-import About from "../About/About";
 
 export default function Home() {
   return (
@@ -22,7 +21,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <About />
     </>
   );
 }
