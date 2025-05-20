@@ -1,36 +1,47 @@
-.home-container {
-  /* Make sure it fills the entire viewport */
+.home-section {
   min-height: 100vh;
-
-  /* Background image */
-  background-image: url('/food.jpg'); /* Adjust path as needed */
-
-  /* Make sure the image covers the entire container */
+  background-image: url('/src/assets/images/food1.jpg');
   background-size: cover;
-
-  /* Center the image */
   background-position: center;
-
-  /* Optional: fix the background when scrolling */
   background-attachment: fixed;
-
-  /* Optional: add an overlay for readability */
   position: relative;
+  display: flex;
+  flex-direction: column;
   color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
-/* Optional overlay */
-.home-container::before {
+/* Optional dark overlay for contrast */
+.home-section::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* black overlay with 40% opacity */
+  background: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
 
-/* Content inside Home stays on top of overlay */
-.home-content {
+.home-container {
   position: relative;
   z-index: 1;
+  width: 100%;
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.home-content h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-top: 3rem;
+}
+.home-container span{
+  color: #FF5733;
+}
+.home-container p{
+  font-size: 23px;
+  margin-bottom: 3rem;
 }
